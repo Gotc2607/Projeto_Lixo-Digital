@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Descarte</title>
+    <link rel="stylesheet" href="../statics/css/mapa.css">
+    <link rel="stylesheet" href="../statics/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <div class="navbar">
+        <div class="links"><a href="/">Página Inicial</a></div>
+        <div><a href="/mapa">Mapa</a></div>
+        <div><a href="/quizz">Quiz</a></div>
+    </div>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Mapa -->
+        <div id="map"></div>
+
+        <!-- Formulário para adicionar local -->
+        <div class="form-container">
+            <h2>Adicionar Local</h2>
+            <form id="form-adicionar">
+                <input type="text" id="nome" placeholder="Nome do Local" required>
+                <input type="text" id="endereco" placeholder="Digite o endereço" required>
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+
+        <!-- Lista de locais -->
+        <div class="lista-container">
+            <h2>Locais Adicionados</h2>
+            <ul id="lista-locais"></ul>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../statics/js/mapa.js"></script>
+
+</body>
+</html>
+

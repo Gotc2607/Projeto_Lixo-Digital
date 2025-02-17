@@ -34,36 +34,6 @@ map.on('click', function(e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Captura os cliques na barra de navegação
-    document.querySelectorAll('.navbar a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Impede o comportamento padrão
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                // Faz a rolagem suave até a seção desejada
-                window.scrollTo({
-                    top: targetElement.offsetTop - 50, // Ajuste para a barra de navegação
-                    behavior: 'smooth'
-                });
-
-                // Se for a seção do mapa, reajusta o tamanho após um pequeno delay
-                if (targetId === 'mapa') {
-                    setTimeout(() => {
-                        map.invalidateSize();
-                    }, 500);
-                }
-                if (targetId === 'quiz') {
-                    setTimeout(() => {
-                        map.invalidateSize();
-                    }, 500);
-                }
-            }
-        });
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
     // Inicializando o mapa
     var map = L.map('map').setView([-23.55052, -46.633308], 12); // Posição inicial (São Paulo, exemplo)
 

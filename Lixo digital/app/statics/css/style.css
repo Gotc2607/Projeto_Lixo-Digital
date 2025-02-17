@@ -7,39 +7,33 @@ body {
     padding: 0;
 }
 
-/* Barra de navegação */
+/* Estilizando a barra de navegação */
 .navbar {
-    background-color: #333;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #222;  /* Cor de fundo escura */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+    gap: 20px;  /* Espaço entre os links */
+    border-bottom: 3px solid #ffcc00; /* Linha de destaque abaixo */
 }
 
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-.navbar ul li a {
-    color: white;
+/* Estilo para os links */
+.navbar a {
+    color: #fff;  /* Texto branco */
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 20px;
-    display: inline-block;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
 }
 
-.navbar ul li a:hover {
-    background-color: #4CAF50;
-    border-radius: 5px;
+/* Quando passar o mouse sobre os links */
+.navbar a:hover {
+    background-color: #ffcc00; /* Cor de destaque */
+    color: #222;  /* Cor do texto ao passar o mouse */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; 
 }
 
 /* Seções da página */
@@ -48,15 +42,8 @@ section {
     padding: 60px 20px; /* Adiciona espaço para a barra de navegação fixa */
 }
 
-.home-section, .map-section, .quiz-section {
+.home-section {
     text-align: center;
-}
-
-#map {
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -77,7 +64,7 @@ button:hover {
 .home-section {
     text-align: center;
     padding: 100px 20px;
-    background-color:#20e229;
+    background-color:#3cd344;
     color: white;
 }
 
@@ -120,6 +107,11 @@ button:hover {
     animation: bounce 1.5s infinite alternate;
 }
 
+.explore-btn a{
+    text-decoration: none;
+    color: white;
+}
+
 .explore-btn:hover {
     background-color: #F57C00;
 }
@@ -160,94 +152,11 @@ button:hover {
 .p4 { background: #8BC34A; color: white; --rotate-angle: 3deg; }
 
 
-/* Seção do mapa */
-.map-section {
-    text-align: center;
-    padding: 30px 20px;
-    color: white;
-    background-color:#20e229;
-}
-
-.map-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    animation: fadeInDown 1s ease-in-out;
-}
-
-.map-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    animation: fadeInUp 1s ease-in-out;
-}
-
-/* Estilização do mapa */
-#map {
-    width: 60%;
-    height: 350px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Botão de adicionar local */
-#add-location-btn {
-    margin-top: 20px;
-    background-color: #8BC34A;
-    color: white;
-    padding: 12px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#add-location-btn:hover {
-    background-color: #015505;
-}
-
-/* Seção do quiz na página inicial */
-.quiz-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color:#00796B;
-    color: white;
-    border-radius: 10px;
-    animation: fadeInUp 1s ease-in-out;
-}
-
-.quiz-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.quiz-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Botão de iniciar quiz */
-.start-quiz-btn {
-    background-color: #FF9800;
-    color: white;
-    font-size: 18px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.start-quiz-btn:hover {
-    background-color: #E65100;
-    transform: scale(1.1);
-}
 
 footer{
     text-align: center;
     padding: 15px;
-    background-color:#004D40;
+    background-color: #222;
     color: white;
 }
 

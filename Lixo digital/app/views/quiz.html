@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz sobre Lixo Digital</title>
-    <link rel="stylesheet" href="../statics/css/quiz.css">
+    <link rel="stylesheet" href="../statics/css/quiz.css?v={{time}}">
 </head>
 <body>
+
+    <section id="quiz" class="quiz-section">
+        <h2 class="quiz-title">🎯 Teste seus Conhecimentos sobre Descarte de Lixo Digital!</h2>
+        <p class="quiz-subtitle">Você sabe como descartar seus eletrônicos corretamente? Faça o quiz e descubra!</p>
+        
+    </section>
+
     <div class="quiz-container">
 
         <!-- Elemento para mostrar a pergunta -->
@@ -16,7 +23,7 @@
         <div id="answers"></div>
 
         <!-- Feedback após a resposta -->
-        <p id="feedback"></p>
+        <span id="feedback"></span>
 
         <!-- Botão para a próxima pergunta -->
         <button id="next-btn">Próxima Pergunta</button>

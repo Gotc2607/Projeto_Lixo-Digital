@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descarte de Lixo Digital</title>
-    <link rel="stylesheet" href="../statics/css/style.css">
+    <link rel="stylesheet" href="../statics/css/style.css?v={{time}}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -12,13 +12,16 @@
 <body>
 
     <!-- Barra de navegação -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Página Inicial</a></li>
-            <li><a href="#mapa">Mapa</a></li>
-            <li><a href="#quiz">Quiz</a></li>
-        </ul>
-    </nav>
+    <div class="navbar">
+    
+        <a href="/">Página Inicial</a>
+
+        <a href="/mapa">Mapa</a>
+
+        <a href="/quizz">Quiz</a>
+
+    
+    </div>
 
     <!-- Seção Página Inicial -->
     <section id="home" class="home-section">
@@ -33,31 +36,10 @@
                 <div class="post-it p4">🏭 Muitos componentes eletrônicos podem ser reutilizados na indústria.</div>
             </div>
     
-            <button class="explore-btn" onclick="scrollToSection('mapa')">Descubra os Locais de Descarte</button>
+            <button class="explore-btn" ><a href='/mapa'>Veja locais descarte</a></button>
         </div>
     </section>
     
-    
-
-    <!-- Seção Mapa -->
-    <section id="mapa" class="map-section">
-        <h2 class="map-title">🌍 Encontre um Ponto de Descarte Perto de Você</h2>
-        <p class="map-subtitle">Clique nos marcadores para ver detalhes ou adicione um novo local!</p>
-    
-        <div id="map"></div>
-        
-        <button id="add-location-btn">➕ Adicionar Novo Local</button>
-    </section>
-    
-
-    <!-- Seção do Quiz -->
-    <section id="quiz" class="quiz-section">
-        <h2 class="quiz-title">🎯 Teste seus Conhecimentos sobre Descarte de Lixo Digital!</h2>
-        <p class="quiz-subtitle">Você sabe como descartar seus eletrônicos corretamente? Faça o quiz e descubra!</p>
-        
-        <button class="start-quiz-btn" onclick="location.href='quiz.html'">🚀 Começar o Quiz</button>
-    </section>
-
     
     <footer>
         <p>&copy; 2025 Descarte Digital</p>

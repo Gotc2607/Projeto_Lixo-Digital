@@ -11,17 +11,18 @@ class Database:
             CREATE TABLE IF NOT EXISTS locais (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome TEXT NOT NULL,
-                endereço NOT NULL
+                latitude REAL NOT NULL,
+                longitude REAL NOT NULL
             );
         ''')
         self.conn.commit()
 
-    def adicionar_local(self, nome, endereco):
-        self.cursor.execute('''INSERT INTO locais (nome, endereço) VALUES (?, ?, ?)''', (nome, endereco))
+    def adicionar_local(self, nome, latitude, longitude):
+        self.cursor.execute('''INSERT INTO locais (nome, latitude, longitude) VALUES (?, ?, ?)''', (nome, latitude, longitude))
         self.conn.commit()
 
     def obter_locais(self):
-        self.cursor.execute('SELECT nome, endereço FROM locais')
+        self.cursor.execute('SELECT nome, latitude, longitude FROM locais')
         resultado = self.cursor.fetchall()
 
         if resultado:

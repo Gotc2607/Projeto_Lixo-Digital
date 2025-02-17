@@ -33,32 +33,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("form-adicionar").addEventListener("submit", function (e) {
         e.preventDefault();
+        const nome = document.getElementById("nome").value;
         const endereco = document.getElementById("endereco").value;
-
-        // Chamando a API Nominatim para obter coordenadas a partir do endereço
-        fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(endereco)}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.length > 0) {
-                    const lat = data[0].lat;
-                    const lon = data[0].lon;
-
-                    // Enviar para o backend
-                    fetch('/add_local', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: `nome=${endereco}&latitude=${lat}&longitude=${lon}`
-                    }).then(response => response.json())
-                      .then(data => {
-                          adicionarMarcador(endereco, lat, lon);
-                          adicionarNaLista(endereco, lat, lon);
-                          document.getElementById("form-adicionar").reset();
-                      });
-                } else {
-                    alert("Endereço não encontrado! Tente ser mais específico.");
-                }
-            });
-    });
+    
+        console.log("Dados enviados:", nome, endereco); // Debug
+    
+        fetch("/add_local", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `nome=${encodeURIComponent(nome)}&endereco=${encodeURIComponent(endereco)}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.erro) {
+                alert(data.erro);
+            } else {
+                alert("Local adicionado com sucesso!");
+                document.getElementById("form-adicionar").reset();
+            }
+        })
+        .catch(error => console.error("Erro:", error));
+    });    
 
     carregarLocais();
 });

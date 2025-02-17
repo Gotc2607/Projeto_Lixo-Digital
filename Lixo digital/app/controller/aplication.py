@@ -33,11 +33,14 @@ class Aplication:
     # Rota para obter todos os locais cadastrados
     def get_locais(self):
         locais = self.db.obter_locais()
-        response.content_type = 'application/json'
+        if not locais:  
+            return json.dumps([])
         return json.dumps([{"nome": nome, "latitude": lat, "longitude": lon} for nome, lat, lon in locais])
 
     # Rota para adicionar um novo local
     def add_local(self):
+        print("Dados recebidos no request.forms:", request.forms)  # Debug
+
         nome = request.forms.get('nome')
         endereco = request.forms.get('endereco')
 
@@ -45,6 +48,16 @@ class Aplication:
             response.status = 400
             return {"erro": "Dados inválidos"}
 
-        self.db.adicionar_local(nome, endereco)
-        return {"mensagem": "Local adicionado com sucesso"}
+        print(f"Nome: {nome}, Endereço: {endereco}")  # Debug
+
+        try:
+            latitude, longitude = map(float, endereco.split(", "))
+            print(f"Latitude: {latitude}, Longitude: {longitude}")  # Debug
+
+            self.db.adicionar_local(nome, latitude, longitude)
+            return {"mensagem": "Local adicionado com sucesso"}
+
+        except ValueError:
+            response.status = 400
+            return {"erro": "Formato inválido de latitude/longitude"}
 

@@ -38,18 +38,13 @@ class Aplication:
 
     # Rota para adicionar um novo local
     def add_local(self):
-        try:
-            data = request.json
-            nome = data.get('nome')
-            endereco = data.get('endereco')
+        nome = request.forms.get('nome')
+        endereco = request.forms.get('endereco')
 
-            if not nome or not endereco:
-                response.status = 400
-                return {"erro": "Dados inválidos"}
+        if not nome or not endereco:
+            response.status = 400
+            return {"erro": "Dados inválidos"}
 
-            self.db.adicionar_local(nome, endereco)
-            return {"mensagem": "Local adicionado com sucesso"}
-        except Exception as e:
-            response.status = 500
-            return {"erro": str(e)}
+        self.db.adicionar_local(nome, endereco)
+        return {"mensagem": "Local adicionado com sucesso"}
 

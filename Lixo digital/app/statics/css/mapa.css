@@ -43,11 +43,12 @@ form input, form button {
     border-radius: 5px;
 }
 
-form button {
-    background-color: #28a745;
+#form-adicionar button{
     color: white;
     cursor: pointer;
+    background-color: #0258ff;
 }
+
 
 form button:hover {
     background-color: #218838;

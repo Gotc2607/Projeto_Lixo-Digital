@@ -1,39 +1,39 @@
 /* Estilos gerais */
+
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #4CAF50, #2E7D32);
     color: #333;
+    background-image: url(../img/cool-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 /* Estilizando a barra de navegação */
 .navbar {
-    background-color: #222;  /* Cor de fundo escura */
-    padding: 15px 20px;
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centraliza os itens */
-    align-items: center;
-    gap: 20px;  /* Espaço entre os links */
-    border-bottom: 3px solid #ffcc00; /* Linha de destaque abaixo */
+    justify-content: space-evenly;
+    padding: 50px 0;
 }
 
 /* Estilo para os links */
 .navbar a {
-    color: #fff;  /* Texto branco */
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 15px;
+    color: black;
+    font-size: 1.2em;
+    border: 2px solid black;
+    padding: 10px 30px;
+    border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
 
 /* Quando passar o mouse sobre os links */
 .navbar a:hover {
-    background-color: #ffcc00; /* Cor de destaque */
-    color: #222;  /* Cor do texto ao passar o mouse */
-    border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; 
+    transform: scale(1.1);
 }
 
 /* Seções da página */
@@ -46,36 +46,25 @@ section {
     text-align: center;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
-button:hover {
-    background-color: #45a049;
-}
 
 /* Página Inicial */
 .home-section {
     text-align: center;
     padding: 100px 20px;
-    background-color:#3cd344;
-    color: white;
+    color: black;
+    height: auto;
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    padding: 20px 0;
     animation: fadeInDown 1s ease-in-out;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    margin: 10px 0 20px;
+    font-size: 1.5rem;
+    margin: 10px 0 70px;
     animation: fadeInUp 1s ease-in-out;
 }
 
@@ -95,11 +84,11 @@ button:hover {
 
 /* Botão */
 .explore-btn {
-    background-color: #FF9800;
-    color: white;
-    border: none;
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
     padding: 12px 24px;
-    margin: 12px;
+    margin: 52px;
     font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
@@ -109,12 +98,14 @@ button:hover {
 
 .explore-btn a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
-.explore-btn:hover {
-    background-color: #F57C00;
+.explore-btn:hover{
+    transform: scale(1.5);
+    background-color: transparent;
 }
+
 
 /* Contêiner dos post-its */
 .post-it-container {
@@ -128,6 +119,7 @@ button:hover {
 /* Estilo dos post-its */
 .post-it {
     width: 200px;
+    background-color: white;
     padding: 15px;
     margin: 15px;
     font-size: 16px;
@@ -137,6 +129,13 @@ button:hover {
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
     transform: rotate(var(--rotate-angle));
     transition: transform 0.2s, box-shadow 0.3s;
+    color: black;
+}
+
+.post-it p{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 /* Efeito ao passar o mouse */
@@ -146,22 +145,26 @@ button:hover {
 }
 
 /* Cores dos post-its */
-.p1 { background: #8BC34A; color: #333; --rotate-angle: -3deg; }
-.p2 { background: #8BC34A; color: white; --rotate-angle: 2deg; }
-.p3 { background: #8BC34A; color: white; --rotate-angle: -2deg; }
-.p4 { background: #8BC34A; color: white; --rotate-angle: 3deg; }
-
+.p1 { 
+    --rotate-angle: -3deg;
+}
+.p2 {
+    --rotate-angle: 2deg; }
+.p3 {
+    --rotate-angle: -2deg; }
+.p4 {
+    --rotate-angle: 3deg; }
 
 
 footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     padding: 15px;
     background-color: #222;
     color: white;
 }
-
-
-
 
 /* Animações */
 @keyframes fadeInUp {

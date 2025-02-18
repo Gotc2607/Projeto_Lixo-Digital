@@ -1,28 +1,33 @@
 /* Fundo e estilo geral */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #00796B;
+    background-image: url(../img/cool-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 /* Seção do quiz na página inicial */
 .quiz-section {
     text-align: center;
     padding: 50px 20px;
-    color: white;
+    color: black;
     border-radius: 10px;
+    font-size: 2em;
     animation: fadeInUp 1s ease-in-out;
 }
 
 .quiz-title {
-    font-size: 2rem;
+    font-size: 3rem;
+    color: black;
     margin-bottom: 10px;
 }
 
 .quiz-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.4rem;
 }
 
 /* Botão de iniciar quiz */
@@ -45,10 +50,9 @@ body {
 .quiz-container {
     width: 80%;
     max-width: 600px;
-    margin: 50px auto;
-    background: #27db54;
+    margin: 0px auto;
+    background: black;
     padding: 20px;
-    border: 5px solid green;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -95,9 +99,9 @@ span  {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    background:rgb(249, 253, 2);
-    border: 5px solid green;
-    color: #000000;
+    border: none;
+    background:#0258ff;
+    color: white;
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
@@ -111,12 +115,10 @@ span  {
 
 .answer-btn.correct {
     background: #02ff0e;
-    transform: scale(1.1);
 }
 
 .answer-btn.wrong {
     background: #ff1900;
-    transform: scale(1.1);
 }
 
 #feedback {
@@ -152,4 +154,28 @@ span  {
 
 #next-btn:hover {
     background: #2ecc71;
+}
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+
+/* Estilo para os links */
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    border: 2px solid black;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Quando passar o mouse sobre os links */
+.navbar a:hover {
+    transform: scale(1.1);
 }

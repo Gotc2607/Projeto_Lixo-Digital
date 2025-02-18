@@ -35,7 +35,7 @@ map.on('click', function(e) {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Inicializando o mapa
-    var map = L.map('map').setView([-23.55052, -46.633308], 12); // Posição inicial (São Paulo, exemplo)
+    var map = L.map('map').setView([-15.989007, -48.044317], 12); // Posição inicial (São Paulo, exemplo)
 
     // Adicionando o mapa base do OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

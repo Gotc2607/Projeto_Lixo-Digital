@@ -6,22 +6,24 @@
     <title>Descarte de Lixo Digital</title>
     <link rel="stylesheet" href="../statics/css/style.css?v={{time}}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="../statics/css/reset.css">
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <nav>
 
+        <div class="navbar">
+        
+            <a href="/">Página Inicial</a>
+    
+            <a href="/mapa">Mapa</a>
+    
+            <a href="/quizz">Quiz</a>
+
+        </div><!--nav-->
+    </nav>
     <!-- Barra de navegação -->
-    <div class="navbar">
-    
-        <a href="/">Página Inicial</a>
-
-        <a href="/mapa">Mapa</a>
-
-        <a href="/quizz">Quiz</a>
-
-    
-    </div>
 
     <!-- Seção Página Inicial -->
     <section id="home" class="home-section">
@@ -30,21 +32,30 @@
             <p class="subtitle">Saiba a importância de descartar corretamente seus eletrônicos e ajude o meio ambiente.</p>
     
             <div class="post-it-container">
-                <div class="post-it p1">💡 Eletrônicos descartados incorretamente podem contaminar o solo e a água.</div>
-                <div class="post-it p2">♻️ Reciclar dispositivos evita o desperdício de materiais valiosos.</div>
-                <div class="post-it p3">📱 Baterias jogadas no lixo comum podem causar explosões e incêndios.</div>
-                <div class="post-it p4">🏭 Muitos componentes eletrônicos podem ser reutilizados na indústria.</div>
-            </div>
+                <div class="post-it p1">
+                    <p>Eletrônicos descartados incorretamente podem contaminar o solo e a água.</p>
+                </div>
+                <div class="post-it p2">
+                    <p>Reciclar dispositivos evita o desperdício de materiais valiosos.</p>
+                </div>
+                <div class="post-it p3">
+                    <p>Baterias jogadas no lixo comum podem causar explosões e incêndios.</p>
+                </div>
+                <div class="post-it p4">
+                    <p>Muitos componentes eletrônicos podem ser reutilizados na indústria.</p>
+                </div>
     
+            </div>
             <button class="explore-btn" ><a href='/mapa'>Veja locais descarte</a></button>
         </div>
     </section>
-    
-    
-    <footer>
-        <p>&copy; 2025 Descarte Digital</p>
-    </footer>
 
+    <footer>
+        <p>&copy; 2025 Descarte Digital <a href="https://storyset.com/nature">Nature illustrations by Storyset</a></p>
+    </footer>
+    
+    
     <script src="../statics/js/scrpt.js"></script>
+
 </body>
 </html>
